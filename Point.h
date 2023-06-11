@@ -6,25 +6,25 @@ namespace miit::text
 	struct  Point
 	{
         /*
-        @brief инициализирует новый объект класса Point
-        @param x - абсцисса
-        @param y - ордината
+        @brief РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Point
+        @param x - Р°Р±СЃС†РёСЃСЃР°
+        @param y - РѕСЂРґРёРЅР°С‚Р°
         */
         Point(const double x = 0, const double y = 0);
 
         /*
-        @brief Перегрузка оператора потока вывода
-        @param os поток вывода
-        @param point точка
-        @return Поток вывода
+        @brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РїРѕС‚РѕРєР° РІС‹РІРѕРґР°
+        @param os РїРѕС‚РѕРє РІС‹РІРѕРґР°
+        @param point С‚РѕС‡РєР°
+        @return РџРѕС‚РѕРє РІС‹РІРѕРґР°
         */
         friend std::ostream& operator<< (std::ostream& os, const Point& point);
 
         /*
-        @brief Перегрузка оператора сравнения
-        @param lhs Первый аргумент
-        @param rhs Второй аргумент
-        @return Поток вывода
+        @brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ
+        @param lhs РџРµСЂРІС‹Р№ Р°СЂРіСѓРјРµРЅС‚
+        @param rhs Р’С‚РѕСЂРѕР№ Р°СЂРіСѓРјРµРЅС‚
+        @return РџРѕС‚РѕРє РІС‹РІРѕРґР°
         */
         friend bool operator ==(const Point& lha, const Point& rha);
 
