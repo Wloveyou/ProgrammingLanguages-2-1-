@@ -7,50 +7,50 @@ namespace miit::text
 	{
 	public:
 		/*
-		@brief инициализирует новый объект класса Font
-		@param name Имя шрифта
-		@param color Цвет шрифта
-		@param size Размер шрифта
+		@brief РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Font
+		@param name РРјСЏ С€СЂРёС„С‚Р°
+		@param color Р¦РІРµС‚ С€СЂРёС„С‚Р°
+		@param size Р Р°Р·РјРµСЂ С€СЂРёС„С‚Р°
 		*/
 		Font(const std::string& name, const Color& color, const int size);
 
 		/*
-		@brief Перегрузка оператора потока вывода
-		@param os поток вывода
-		@param fonst шрифт
-		@return Поток вывода
+		@brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РїРѕС‚РѕРєР° РІС‹РІРѕРґР°
+		@param os РїРѕС‚РѕРє РІС‹РІРѕРґР°
+		@param fonst С€СЂРёС„С‚
+		@return РџРѕС‚РѕРє РІС‹РІРѕРґР°
 		*/
 		friend std::ostream& operator<< (std::ostream& os, const Font& font);
 
 		/*
-		@brief Перегрузка оператора сравнения
-		@param lha Первый параметр для сравнения
-		@param rha Второй параметр для сравнения
-		@return true - равны, false - неравны
+		@brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ
+		@param lha РџРµСЂРІС‹Р№ РїР°СЂР°РјРµС‚СЂ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ
+		@param rha Р’С‚РѕСЂРѕР№ РїР°СЂР°РјРµС‚СЂ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ
+		@return true - СЂР°РІРЅС‹, false - РЅРµСЂР°РІРЅС‹
 		*/
 		friend bool operator ==(const Font& lha, const Font& rha);
 
 		/*
-		@brief Изменение цвета шрифта
-		@param color Новый цвет
+		@brief РР·РјРµРЅРµРЅРёРµ С†РІРµС‚Р° С€СЂРёС„С‚Р°
+		@param color РќРѕРІС‹Р№ С†РІРµС‚
 		*/
 		void set_color(const Color& color);
 
 		/*
-		@brief Изменение размера шрифта
-		@param size Новый размер
+		@brief РР·РјРµРЅРµРЅРёРµ СЂР°Р·РјРµСЂР° С€СЂРёС„С‚Р°
+		@param size РќРѕРІС‹Р№ СЂР°Р·РјРµСЂ
 		*/
 		void set_size(const int size);
 
 		/*
-		@brief Получение цвета шрифта
-		@return Цвет шрифта
+		@brief РџРѕР»СѓС‡РµРЅРёРµ С†РІРµС‚Р° С€СЂРёС„С‚Р°
+		@return Р¦РІРµС‚ С€СЂРёС„С‚Р°
 		*/
 		const Color& get_color() const;
 
 		/*
-		@brief Получение размера шрифта
-		@return Размер шрифта
+		@brief РџРѕР»СѓС‡РµРЅРёРµ СЂР°Р·РјРµСЂР° С€СЂРёС„С‚Р°
+		@return Р Р°Р·РјРµСЂ С€СЂРёС„С‚Р°
 		*/
 		const int get_size() const;
 
