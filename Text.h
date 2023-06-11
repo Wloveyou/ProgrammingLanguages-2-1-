@@ -8,69 +8,69 @@ namespace miit::text
 	{
 	public:
 		/*
-		@brief инициализирует новый объект класса Text
-		@param text Текст
-		@param start_point Начальная точка
+		@brief РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Text
+		@param text РўРµРєСЃС‚
+		@param start_point РќР°С‡Р°Р»СЊРЅР°СЏ С‚РѕС‡РєР°
 		*/
 		Text(const std::string& text, const Font& font, const Point& start_point);
 
 		/*
-		@brief Изменения текста
-		@param text Новый текст
+		@brief РР·РјРµРЅРµРЅРёСЏ С‚РµРєСЃС‚Р°
+		@param text РќРѕРІС‹Р№ С‚РµРєСЃС‚
 		*/
 		void set_text(const std::string& text);
 
 		/*
-		@brief Получение текста
-		@return Текст
+		@brief РџРѕР»СѓС‡РµРЅРёРµ С‚РµРєСЃС‚Р°
+		@return РўРµРєСЃС‚
 		*/
 		std::string get_text();
 
 		/*
-		@brief Здание шрифта текста
-		@param font Новыйшрифт
+		@brief Р—РґР°РЅРёРµ С€СЂРёС„С‚Р° С‚РµРєСЃС‚Р°
+		@param font РќРѕРІС‹Р№С€СЂРёС„С‚
 		*/
 		void set_font(const Font& font);
 
 		/*
-		@brief Получение шрифта
-		@return Шрифт
+		@brief РџРѕР»СѓС‡РµРЅРёРµ С€СЂРёС„С‚Р°
+		@return РЁСЂРёС„С‚
 		*/
 		Font get_font() const;
 
 
 		/*
-		@brief Здание точки начала текста
-		@param start_point Новая точка начала
+		@brief Р—РґР°РЅРёРµ С‚РѕС‡РєРё РЅР°С‡Р°Р»Р° С‚РµРєСЃС‚Р°
+		@param start_point РќРѕРІР°СЏ С‚РѕС‡РєР° РЅР°С‡Р°Р»Р°
 		*/
 		void set_start_point(const Point& start_point);
 
 		/*
-		@brief Получение точки начала текста
-		@return Точка начала текста
+		@brief РџРѕР»СѓС‡РµРЅРёРµ С‚РѕС‡РєРё РЅР°С‡Р°Р»Р° С‚РµРєСЃС‚Р°
+		@return РўРѕС‡РєР° РЅР°С‡Р°Р»Р° С‚РµРєСЃС‚Р°
 		*/
 		Point get_start_point() const;
 
 		
 		/*
-		@brief Преобразование объекта в строку
-		@return Строка с параметрами объекта
+		@brief РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РІ СЃС‚СЂРѕРєСѓ
+		@return РЎС‚СЂРѕРєР° СЃ РїР°СЂР°РјРµС‚СЂР°РјРё РѕР±СЉРµРєС‚Р°
 		*/
 		std::string to_string() const;
 
 		/*
-		@brief Перегрузка оператора потока вывода
-		@param os поток вывода
-		@param text текст
-		@return Поток вывода
+		@brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РїРѕС‚РѕРєР° РІС‹РІРѕРґР°
+		@param os РїРѕС‚РѕРє РІС‹РІРѕРґР°
+		@param text С‚РµРєСЃС‚
+		@return РџРѕС‚РѕРє РІС‹РІРѕРґР°
 		*/
 		friend std::ostream& operator<< (std::ostream& os, const Text& text);
 
 		/*
-		@brief Перегрузка оператора сравнения
-		@param lha Первый параметр для сравнения
-		@param rha Второй параметр для сравнения
-		@return true - равны, false - неравны
+		@brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ
+		@param lha РџРµСЂРІС‹Р№ РїР°СЂР°РјРµС‚СЂ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ
+		@param rha Р’С‚РѕСЂРѕР№ РїР°СЂР°РјРµС‚СЂ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ
+		@return true - СЂР°РІРЅС‹, false - РЅРµСЂР°РІРЅС‹
 		*/
 		friend bool operator ==(const Text& lha, const Text& rha);
 
